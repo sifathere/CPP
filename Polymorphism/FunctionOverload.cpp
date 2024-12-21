@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+ 
 class Calculator {
 public:
     int add(int a, int b) {
