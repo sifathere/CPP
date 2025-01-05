@@ -2,21 +2,24 @@
 using namespace std;
 
 int main() {
-    int num, count = 0;
+    long long num;
+    int luckyCount = 0;
+
     cin >> num;
 
-    if (num == 0) {
-        count = 1;
-    } else {
-        while (num != 0) {
-            num /= 10;
-            count++;
+    while (num != 0) {
+        int digit = num % 10;
+        if (digit == 4 || digit == 7) {
+            luckyCount++;
         }
+        num /= 10;
     }
-    if(count == 4 || count == 7)
-        cout<<"YES";
-    else
-        cout<<"NO";
+
+    if (luckyCount == 4 || luckyCount == 7) {
+        cout << "YES";
+    } else {
+        cout << "NO";
+    }
 
     return 0;
 }
