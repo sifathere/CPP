@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 stack<int> sortStack(stack<int> &input)
 {
 	stack<int> tmpStack;
