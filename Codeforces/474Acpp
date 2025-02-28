@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string keyboard = "qwertyuiopasdfghjkl;zxcvbnm,./";
+    char direction;
+    string input, result = "";
+    
+    cin >> direction >> input;
+
+    int shift = (direction == 'R') ? -1 : 1;
+
+    for (char c : input) {
+        int pos = keyboard.find(c);
+        result += keyboard[pos + shift];
+    }
+
+    cout << result << endl;
+    return 0;
+}
